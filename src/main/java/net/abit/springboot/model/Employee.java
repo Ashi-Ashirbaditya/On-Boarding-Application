@@ -23,17 +23,21 @@ public class Employee {
     @Column(name = "date", nullable = true, unique = false)
     private LocalDate date;
     
+    @Column(name = "salary", nullable = true)
+    private Long salary;
+    
     // Constructors
     public Employee() {
     }
 
-    public Employee(String firstName, String lastName, String email) {
+    public Employee(String firstName, String lastName, String email, Long salary) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.salary = salary;
     }
 
-    // Getters & Setters
+	// Getters & Setters
     public long getId() {
         return id;
     }
@@ -73,4 +77,12 @@ public class Employee {
     public void setDate(LocalDate date) {
         this.date = date;
     }
+    
+    public Long getSalary() {
+		return salary;
+	}
+
+	public void setSalary(Long salary) {
+		this.salary = salary;
+	}
 }

@@ -6,14 +6,16 @@
   <link rel="stylesheet" href="/css/home.css">
 </head>
 <body>
-
   <nav>
-    <a href="mailto:ashi@gmail.com">Contact Us</a>
-    <a th:href="@{/login}">Login</a>
+    <div class="container">
+		Login Successful<!---Added-->
+		Welcome <span sec:authentication="principal.username"> User</span><!--added-->
+	<div sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></div>
+	</div>
   </nav>
 
   <div class="center-box">
-    <a th:href="@{/aboutUs.html}"><button class="get-started-btn">
+    <a href="/index"><button class="get-started-btn">
       Get Started
     </button></a>
 

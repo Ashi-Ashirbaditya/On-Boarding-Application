@@ -18,21 +18,16 @@ public class EmployeeController {
     private EmployeeService employeeService;
     
     @GetMapping("/")
+	public String home() {
+		return "home";
+	}
+    
+    @GetMapping("/index")
     public String viewHomePage(Model model) {
-        return findPaginated(1, "firstName", "asc", model);
+    	model.addAttribute("employee", employeeService.getAllEmployees());
+		model.addAttribute("employee", new Employee());
+        return findPaginated(1, "id", "asc", model);
     }
-
-
-    // List all employees with pagination
-	/*
-	 * @GetMapping("/employees") public String
-	 * listEmployees(@RequestParam(defaultValue = "1") int pageNo, Model model) {
-	 * int pageSize = 5; model.addAttribute("listEmployees",
-	 * employeeService.findPaginated(pageNo, pageSize, "firstName",
-	 * "asc").getContent()); model.addAttribute("currentPage", pageNo);
-	 * model.addAttribute("totalPages", employeeService.findPaginated(pageNo,
-	 * pageSize, "firstName", "asc").getTotalPages()); return "index"; }
-	 */
     
     // Show form to add a new employee
     @GetMapping("/showNewEmployeeForm")
@@ -46,7 +41,7 @@ public class EmployeeController {
     @PostMapping("/saveEmployee")
     public String saveEmployee(@ModelAttribute("employee") Employee employee) {
         employeeService.saveEmployee(employee);
-        return "redirect:/";
+        return "redirect:/index";
     }
 
     // Show form to update an employee
@@ -61,7 +56,7 @@ public class EmployeeController {
     @GetMapping("/deleteEmployee/{id}")
     public String deleteEmployee(@PathVariable("id") long id) {
         this.employeeService.deleteEmployeeById(id);
-        return "redirect:/";
+        return "redirect:/index";
     }
     
 

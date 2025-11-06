@@ -14,12 +14,6 @@ public class UserController {
     @Autowired
     private UserService userService;
     
-    //Home page
-    @GetMapping("/home")
-    public String homePage(Model model) {
-        return "home";
-    }
-    
     // Registration form view
     @GetMapping("/registration")
     public String showRegistrationForm(Model model) {
