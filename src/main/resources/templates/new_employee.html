@@ -19,22 +19,22 @@
             <label>First Name</label>
             <input type="text" class="form-control" th:field="*{firstName}" placeholder="First Name" required/>
         </div>
-
         <div class="form-group mb-3">
             <label>Last Name</label>
             <input type="text" class="form-control" th:field="*{lastName}" placeholder="Last Name" required/>
         </div>
-
         <div class="form-group mb-3">
             <label>Email</label>
             <input type="email" class="form-control" th:field="*{email}" placeholder="Email" required/>
         </div>
-		
 		<div class="form-group mb-3">
 		    <label>Joining Date</label>
 		    <input type="date" class="form-control" th:field="*{date}" placeholder="Joining Date" required/>
 		</div>
-		
+		<div class="form-group mb-3">
+            <label>Department Name</label>
+            <input type="text" class="form-control" th:field="*{dept}" placeholder="Deaprtment Name"/>
+        </div>
 		<div class="form-group mb-3">
 		    <label>Salary</label>
 		    <input type="number" class="form-control" th:field="*{salary}" placeholder="Salary" step="0.01"/>

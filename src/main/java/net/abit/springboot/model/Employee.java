@@ -26,15 +26,19 @@ public class Employee {
     @Column(name = "salary", nullable = true)
     private Long salary;
     
-    // Constructors
+    @Column(name = "dept", nullable = true)
+    private String dept;
+
+	// Constructors
     public Employee() {
     }
 
-    public Employee(String firstName, String lastName, String email, Long salary) {
+    public Employee(String firstName, String lastName, String email, Long salary, String dept) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.salary = salary;
+        this.dept = dept;
     }
 
 	// Getters & Setters
@@ -84,5 +88,13 @@ public class Employee {
 
 	public void setSalary(Long salary) {
 		this.salary = salary;
+	}
+	
+	public String getDept() {
+		return dept;
+	}
+
+	public void setDept(String dept) {
+		this.dept = dept;
 	}
 }
