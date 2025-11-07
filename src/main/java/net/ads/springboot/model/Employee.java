@@ -33,12 +33,13 @@ public class Employee {
     public Employee() {
     }
 
-    public Employee(String firstName, String lastName, String email, Long salary, String dept) {
+    public Employee(String firstName, String lastName, String email, Long salary, Date date, String dept) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.salary = salary;
         this.dept = dept;
+        this.date = date;
     }
 
 	// Getters & Setters
