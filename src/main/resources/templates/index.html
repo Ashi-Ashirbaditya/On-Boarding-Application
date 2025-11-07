@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/extras/spring-security">
 <head>
 <meta charset="ISO-8859-1">
 <title>Onboarding Application</title>
@@ -35,27 +35,27 @@
     <tr>
      <th>
       <a th:href="@{'/page/' + ${currentPage} + '?sortField=firstName&sortDir=' + ${reverseSortDir}}">
-       Employee First Name</a>
+       First Name</a>
      </th>
      <th>
      <a th:href="@{'/page/' + ${currentPage} + '?sortField=lastName&sortDir=' + ${reverseSortDir}}">
-       Employee Last Name</a>
+       Last Name</a>
      </th>
      <th>
      <a th:href="@{'/page/' + ${currentPage} + '?sortField=email&sortDir=' + ${reverseSortDir}}">
-       Employee Email</a>
+       Email</a>
      </th>
 	 <th>
 		<a th:href="@{'/page/' + ${currentPage} + '?sortField=date&sortDir=' + ${reverseSortDir}}">
-			Joining Date</a>
+		Joining Date</a>
 	</th>
 	<th>
 		<a th:href="@{'/page/' + ${currentPage} + '?sortField=dept&sortDir=' + ${reverseSortDir}}">
-			Deaprtment Name</a>
+		Deaprtment Name</a>
 	</th>
 	<th>
 		<a th:href="@{'/page/' + ${currentPage} + '?sortField=salary&sortDir=' + ${reverseSortDir}}">
-			Salary</a>
+		Salary</a>
 	</th>
      <th> Actions </th>
     </tr>
