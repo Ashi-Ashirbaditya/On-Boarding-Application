@@ -1,7 +1,9 @@
-package net.abit.springboot.service;
+package net.ads.springboot.service;
 
-import net.abit.springboot.model.Employee;
 import org.springframework.data.domain.Page;
+
+import net.ads.springboot.model.Employee;
+
 import java.util.List;
 
 public interface EmployeeService {

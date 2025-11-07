@@ -1,7 +1,7 @@
-package net.abit.springboot.controller;
+package net.ads.springboot.controller;
 
-import net.abit.springboot.model.Employee;
-import net.abit.springboot.service.EmployeeService;
+import net.ads.springboot.model.Employee;
+import net.ads.springboot.service.EmployeeService;
 
 import java.util.List;
 

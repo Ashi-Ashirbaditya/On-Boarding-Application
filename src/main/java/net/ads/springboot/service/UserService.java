@@ -1,7 +1,8 @@
-package net.abit.springboot.service;
+package net.ads.springboot.service;
 
-import net.abit.springboot.dto.UserRegistrationDto;
-import net.abit.springboot.model.User;
+import net.ads.springboot.dto.UserRegistrationDto;
+import net.ads.springboot.model.User;
+
 import org.springframework.security.core.userdetails.UserDetailsService;
 
 public interface UserService extends UserDetailsService {

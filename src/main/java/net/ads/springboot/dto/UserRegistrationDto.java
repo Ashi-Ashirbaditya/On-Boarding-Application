@@ -1,4 +1,4 @@
-package net.abit.springboot.dto;
+package net.ads.springboot.dto;
 
 public class UserRegistrationDto {
 

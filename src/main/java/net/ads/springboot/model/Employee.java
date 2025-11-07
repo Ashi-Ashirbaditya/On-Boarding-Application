@@ -1,7 +1,7 @@
-package net.abit.springboot.model;
+package net.ads.springboot.model;
 
 import jakarta.persistence.*;
-import java.time.LocalDate;
+import java.sql.Date;
 
 @Entity
 @Table(name = "employees")
@@ -21,7 +21,7 @@ public class Employee {
     private String email;
 
     @Column(name = "date", nullable = true, unique = false)
-    private LocalDate date;
+    private Date date;
     
     @Column(name = "salary", nullable = true)
     private Long salary;
@@ -74,11 +74,11 @@ public class Employee {
         this.email = email;
     }
     
-    public LocalDate getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(Date date) {
         this.date = date;
     }
     

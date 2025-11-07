@@ -1,9 +1,10 @@
-package net.abit.springboot.service;
+package net.ads.springboot.service;
 
-import net.abit.springboot.dto.UserRegistrationDto;
-import net.abit.springboot.model.Role;
-import net.abit.springboot.model.User;
-import net.abit.springboot.repository.UserRepository;
+import net.ads.springboot.dto.UserRegistrationDto;
+import net.ads.springboot.model.Role;
+import net.ads.springboot.model.User;
+import net.ads.springboot.repository.UserRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

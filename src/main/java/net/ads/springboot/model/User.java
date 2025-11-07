@@ -1,4 +1,4 @@
-package net.abit.springboot.model;
+package net.ads.springboot.model;
 
 import jakarta.persistence.*;
 import java.util.Collection;

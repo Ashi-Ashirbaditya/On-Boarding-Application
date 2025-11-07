@@ -1,7 +1,8 @@
-package net.abit.springboot.service;
+package net.ads.springboot.service;
 
-import net.abit.springboot.model.Employee;
-import net.abit.springboot.repository.EmployeeRepository;
+import net.ads.springboot.model.Employee;
+import net.ads.springboot.repository.EmployeeRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

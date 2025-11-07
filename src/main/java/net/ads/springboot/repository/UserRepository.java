@@ -1,7 +1,8 @@
-package net.abit.springboot.repository;
+package net.ads.springboot.repository;
 
-import net.abit.springboot.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import net.ads.springboot.model.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
     User findByEmail(String email);

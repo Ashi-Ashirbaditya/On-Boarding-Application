@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/extras/spring-security">
 <head>
   <meta charset="UTF-8" />
   <title>Home Page</title>
@@ -15,8 +16,9 @@
 <body>
   <nav>
     <div class="container">
-		Login Successful<!---Added-->
-		Welcome <span sec:authentication="principal.username"> User</span><!--added-->
+	Welcome<a th:href="@{/user/profile}" class="text-info text-decoration-none">
+    <strong sec:authentication="principal.username"></strong>
+    </a>
 	<div sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></div>
 	</div>
   </nav>

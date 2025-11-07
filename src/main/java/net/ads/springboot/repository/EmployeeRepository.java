@@ -1,7 +1,8 @@
-package net.abit.springboot.repository;
+package net.ads.springboot.repository;
 
-import net.abit.springboot.model.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import net.ads.springboot.model.Employee;
 
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 }
