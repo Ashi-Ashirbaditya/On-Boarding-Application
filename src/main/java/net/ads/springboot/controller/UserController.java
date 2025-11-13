@@ -27,9 +27,12 @@ public class UserController {
     // Handle user registration
     @PostMapping("/registration")
     public String registerUser(@ModelAttribute("user") UserRegistrationDto userRegistrationDto, Model model) {
-        User user = userService.save(userRegistrationDto);
+        try{User user = userService.save(userRegistrationDto);
         model.addAttribute("success", true);
-        return "registration";
+        return "registration";}
+        catch(IllegalArgumentException e){
+            model.addAttribute("error", e.getMessage());
+            return "registration";}
     }
 
 

@@ -28,6 +28,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User save(UserRegistrationDto registrationDto) {
+        if (userRepository.findByEmail(registrationDto.getEmail()) != null) {
+            throw new IllegalArgumentException("Email already registered!");
+        }
         User user = new User(registrationDto.getFirstName(), registrationDto.getLastName(),
                 registrationDto.getEmail(), passwordEncoder.encode(registrationDto.getPassword()),
                 Arrays.asList(new Role("ROLE_USER")));

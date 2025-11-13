@@ -19,8 +19,8 @@
 	Welcome<a th:href="@{/user/profile}" class="text-info text-decoration-none">
     <strong sec:authentication="principal.username"></strong>
     </a>
-	<div sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></div>
 	</div>
+      <div sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></div>
   </nav>
 
   <div class="center-box">
